@@ -1,0 +1,35 @@
+body{
+	font-family: Comic Sans MS;
+	background-color: #6E7B8B;
+        color: #FFFFFF;
+}
+
+h1{
+    color: #FFFFFF;
+    text-align: center;
+    
+}
+table{
+    text-align: center;
+    
+}
+
+input{
+    text-align: center;
+    font-family: Comic Sans MS;
+    
+}
+#container{
+	margin: 100px;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+a{
+    color: #ffffff;
+    text-decoration: none;
+    
+}
+a:hover{
+    font-style: italic;
+}
