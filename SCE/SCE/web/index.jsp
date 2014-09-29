@@ -30,13 +30,10 @@
             
             <div id="relatorio">
             
-            <h3><a href="RelatorioCursoController"> Relatório Curso </a><br/></h3>
-           <!--<form action="RelatorioCursoController"><input type="submit" value="Relatório de Curso"></form>-->
             <h3><a href="relataAluno.jsp"> Relatório Aluno </a><br/></h3>
-            <h3><a href="RelatorioEmpresaController"> Relatório Empresa </a><br/></h3>
             <h3><a href="relataOriEmp.jsp"> Relatório Orientador da Empresa </a><br/></h3>
-            <h3><a href="RelatorioOriInstController"> Relatório Orientador da Instituição </a><br/></h3>
-            <h3><a href="RelatorioEstagioController"> Relatório Estágio </a><br/></h3>
+            <h3><a href="relataOriInst.jsp"> Relatório Orientador da Instituição </a><br/></h3>
+            <h3><a href="relataEstagio.jsp"> Relatório Estágio </a><br/></h3>
             
             </div>
         </div>

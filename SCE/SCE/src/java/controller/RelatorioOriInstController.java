@@ -42,7 +42,7 @@ public class RelatorioOriInstController extends HttpServlet {
 
             conexao = BD.getConexao();
             HashMap parametros = new HashMap();
-           // parametros.put("PAR_codCurso", Integer.parseInt(request.getParameter("txtCodCurso")));
+            parametros.put("codCurso", Integer.parseInt(request.getParameter("txtCodCurso")));
             String relatorio =  getServletContext().getRealPath("/WEB-INF/relatorios")+"/OrientadorInst.jasper";
             JasperPrint jp = JasperFillManager.fillReport(relatorio, parametros, conexao);
             byte[] relat = JasperExportManager.exportReportToPdf(jp);
