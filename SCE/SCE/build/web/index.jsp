@@ -29,11 +29,12 @@
             </div>
             
             <div id="relatorio">
-            
-            <h3><a href="relataAluno.jsp"> Relatório Aluno </a><br/></h3>
-            <h3><a href="relataOriEmp.jsp"> Relatório Orientador da Empresa </a><br/></h3>
-            <h3><a href="relataOriInst.jsp"> Relatório Orientador da Instituição </a><br/></h3>
-            <h3><a href="relataEstagio.jsp"> Relatório Estágio </a><br/></h3>
+            <h3><a href="RelatorioCursoController"> Relatório Curso </a><br/></h3>
+            <h3><a href="RelatorioAlunoController?acao=prepararOperacao"> Relatório Aluno </a><br/></h3>
+            <h3><a href="RelatorioEmpresaController"> Relatório Empresa </a><br/></h3>
+            <h3><a href="RelatorioOriEmpController?acao=prepararOperacao"> Relatório Orientador da Empresa </a><br/></h3>
+            <h3><a href="RelatorioOriInstController?acao=prepararOperacao"> Relatório Orientador da Instituição </a><br/></h3>
+            <h3><a href="RelatorioEstagioController?acao=prepararOperacao"> Relatório Estágio </a><br/></h3>
             
             </div>
         </div>

@@ -15,7 +15,9 @@
         <link rel="stylesheet" type= "text/css" href="style.css" />
     </head>
     <body>
+        <div id="container">
         <h1>Pesquisa de Empresas</h1>
+        <hr>
         <table border="1">
             <tr>
                 <th>Código Empresa</th>
@@ -34,5 +36,6 @@
             <form action="ManterEmpresaController?acao=prepararOperacao&operacao=Incluir" method="post">
                 <input type="submit" name="btnIncluir" value="Incluir">
             </form>
+        </div>
     </body>
 </html>

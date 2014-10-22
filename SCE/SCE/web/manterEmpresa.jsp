@@ -15,6 +15,7 @@
         <link rel="stylesheet" type= "text/css" href="style.css" />
     </head>
     <body>
+        <div id="container">
         <h1>Manter Empresa - ${operacao}</h1>
         <hr/>
         <form action="ManterEmpresaController?acao=confirmarOperacao&operacao=${operacao}" 
@@ -69,6 +70,7 @@
                     <td><input type="submit" name="btnCancelar" value = "Cancelar"></td>
                 </tr>
             </table>
+        </div>
         </form>
         <SCRIPT language="JavaScript">
             function campoNumerico(valor)

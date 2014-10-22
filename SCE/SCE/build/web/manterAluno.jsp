@@ -16,67 +16,69 @@
 
     </head>
     <body>
-        <h1>Manter Aluno - ${operacao}</h1>
-        <hr/>
-        <form action="ManterAlunoController?acao=confirmarOperacao&operacao=${operacao}" 
-              method="post" name="frmManterAluno" onSubmit="return validarFormulario(this)">
-            <table>
-                <tr>
-                    <td>Código do aluno:</td> 
-                    <td><input type="text" name="txtCodAluno" value="${aluno.codigo}" <c:if test="${operacao != 'Incluir'}"> readonly </c:if> ></td>
-                </tr>
-                <tr>
-                    <td>Nome do aluno:</td> 
-                    <td><input type="text" name="txtNomAluno" value="${aluno.nome}" <c:if test="${operacao == 'Excluir'}"> readonly </c:if>></td>
-                </tr>
-                <tr>
-                    <td>Telefone do aluno:</td> 
-                    <td><input type="text" name="txtTelAluno" value="${aluno.telefone}" <c:if test="${operacao == 'Excluir'}"> readonly </c:if>></td>
-                </tr>
-                <tr>
-                    <td>Endereço</td> 
-                </tr>
-                <tr>
-                    <td>Logradouro:</td> 
-                    <td><input type="text" name="txtLogEndAluno" value="${aluno.logradouro}" <c:if test="${operacao == 'Excluir'}"> readonly </c:if>></td>
-                </tr>
-                <tr>
-                    <td>Número:</td> 
-                    <td><input type="text" name="txtNumEndAluno" value="${aluno.numero}" <c:if test="${operacao == 'Excluir'}"> readonly </c:if>></td>
-                </tr>
-                <tr>
-                    <td>Complemento:</td> 
-                    <td><input type="text" name="txtCompEndAluno" value="${aluno.complemento}" <c:if test="${operacao == 'Excluir'}"> readonly </c:if>></td>
-                </tr>
-              <tr>
-                    <td>Bairro:</td> 
-                    <td><input type="text" name="txtBairroEndAluno" value="${aluno.bairro}" <c:if test="${operacao == 'Excluir'}"> readonly </c:if>></td>
-                </tr>
-                <tr>
-                    <td>Cidade:</td> 
-                    <td><input type="text" name="txtCidEndAluno" value="${aluno.cidade}" <c:if test="${operacao == 'Excluir'}"> readonly </c:if>></td>
-                </tr>
-                <tr>
-                    <td>UF:</td> 
-                    <td><input type="text" name="txtUfEndAluno" value="${aluno.uf}" <c:if test="${operacao == 'Excluir'}"> readonly </c:if>></td>
-                </tr>
-                
-                <tr>
-                    <td>Curso:</td>
-                    <td><select name="optCodCurso">
-                                <c:forEach items="${cursos}" var="curso">
-                                    <option value="${curso.codigo}" <c:if test="${aluno.curso.codigo == curso.codigo}"> selected</c:if>>
-                                        ${curso.nome}
-                                    </option>
-                                </c:forEach>
-                            </select></td>
-                </tr>
-            
-                <tr>
-                    <td><input type="submit" name="btnConfirmar" value="Confirmar"></td>
-                    <td><input type="submit" name="btnCancelar" value = "Cancelar"></td>
-                </tr>
-            </table>
+        <div id="container">
+            <h1>Manter Aluno - ${operacao}</h1>
+            <hr/>
+            <form action="ManterAlunoController?acao=confirmarOperacao&operacao=${operacao}" 
+                  method="post" name="frmManterAluno" onSubmit="return validarFormulario(this)">
+                <table>
+                    <tr>
+                        <td>Código do aluno:</td> 
+                        <td><input type="text" name="txtCodAluno" value="${aluno.codigo}" <c:if test="${operacao != 'Incluir'}"> readonly </c:if> ></td>
+                    </tr>
+                    <tr>
+                        <td>Nome do aluno:</td> 
+                        <td><input type="text" name="txtNomAluno" value="${aluno.nome}" <c:if test="${operacao == 'Excluir'}"> readonly </c:if>></td>
+                    </tr>
+                    <tr>
+                        <td>Telefone do aluno:</td> 
+                        <td><input type="text" name="txtTelAluno" value="${aluno.telefone}" <c:if test="${operacao == 'Excluir'}"> readonly </c:if>></td>
+                    </tr>
+                    <tr>
+                        <td>Endereço</td> 
+                    </tr>
+                    <tr>
+                        <td>Logradouro:</td> 
+                        <td><input type="text" name="txtLogEndAluno" value="${aluno.logradouro}" <c:if test="${operacao == 'Excluir'}"> readonly </c:if>></td>
+                    </tr>
+                    <tr>
+                        <td>Número:</td> 
+                        <td><input type="text" name="txtNumEndAluno" value="${aluno.numero}" <c:if test="${operacao == 'Excluir'}"> readonly </c:if>></td>
+                    </tr>
+                    <tr>
+                        <td>Complemento:</td> 
+                        <td><input type="text" name="txtCompEndAluno" value="${aluno.complemento}" <c:if test="${operacao == 'Excluir'}"> readonly </c:if>></td>
+                    </tr>
+                  <tr>
+                        <td>Bairro:</td> 
+                        <td><input type="text" name="txtBairroEndAluno" value="${aluno.bairro}" <c:if test="${operacao == 'Excluir'}"> readonly </c:if>></td>
+                    </tr>
+                    <tr>
+                        <td>Cidade:</td> 
+                        <td><input type="text" name="txtCidEndAluno" value="${aluno.cidade}" <c:if test="${operacao == 'Excluir'}"> readonly </c:if>></td>
+                    </tr>
+                    <tr>
+                        <td>UF:</td> 
+                        <td><input type="text" name="txtUfEndAluno" value="${aluno.uf}" <c:if test="${operacao == 'Excluir'}"> readonly </c:if>></td>
+                    </tr>
+
+                    <tr>
+                        <td>Curso:</td>
+                        <td><select name="optCodCurso">
+                                    <c:forEach items="${cursos}" var="curso">
+                                        <option value="${curso.codigo}" <c:if test="${aluno.curso.codigo == curso.codigo}"> selected</c:if>>
+                                            ${curso.nome}
+                                        </option>
+                                    </c:forEach>
+                                </select></td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="submit" name="btnConfirmar" value="Confirmar"></td>
+                        <td><input type="submit" name="btnCancelar" value = "Cancelar"></td>
+                    </tr>
+                </table>
+        </div>
         </form> 
          
         <SCRIPT language="JavaScript">

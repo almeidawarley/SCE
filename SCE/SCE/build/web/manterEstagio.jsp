@@ -15,6 +15,7 @@
         <link rel="stylesheet" type= "text/css" href="style.css" />
     </head>
     <body>
+        <div id="container">
         <h1>Manter Estágio - ${operacao}</h1>
         <hr/>
         <form action="ManterEstagioController?acao=confirmarOperacao&operacao=${operacao}" 
@@ -28,7 +29,7 @@
                     <td>Aluno:</td>
                     <td><select name="optCodAluno">
                                 <c:forEach items="${alunos}" var="aluno">
-                                    <option value="${aluno.codigo}" <c:if test="${estagio.aluno.codigo == aluno.codigo}"> selected</c:if> >
+                                    <option value="${aluno.codigo}" <c:if test="${estagio.codAluno == aluno.codigo}"> selected</c:if> >
                                         ${aluno.nome}
                                     </option>
                                 </c:forEach>
@@ -38,7 +39,7 @@
                     <td>Empresa:</td>
                     <td><select name="optCodEmp">
                                 <c:forEach items="${empresas}" var="empresa">
-                                    <option value="${empresa.codigo}" <c:if test="${estagio.empresa.codigo == empresa.codigo}"> selected</c:if> >
+                                    <option value="${empresa.codigo}" <c:if test="${estagio.codEmpresa == empresa.codigo}"> selected</c:if> >
                                         ${empresa.nome}
                                     </option>
                                 </c:forEach>
@@ -48,7 +49,7 @@
                     <td>Orientador da Empresa:</td>
                     <td><select name="optCodOriEmp">
                                 <c:forEach items="${orientadorempresas}" var="orientadorempresa">
-                                    <option value="${orientadorempresa.codigo}" <c:if test="${estagio.orientadorEmpresa.codigo == orientadorempresa.codigo}"> selected</c:if> >
+                                    <option value="${orientadorempresa.codigo}" <c:if test="${estagio.codOrientadorEmpresa == orientadorempresa.codigo}"> selected</c:if> >
                                         ${orientadorempresa.nome}
                                     </option>
                                 </c:forEach>
@@ -58,7 +59,7 @@
                     <td>Orientador da Instituição:</td>
                     <td><select name="optCodOriInst">
                                 <c:forEach items="${orientadorinstituicaos}" var="orientadorinstituicao">
-                                    <option value="${orientadorinstituicao.codigo}" <c:if test="${estagio.orientadorInstituicao.codigo == orientadorinstituicao.codigo}"> selected</c:if> >
+                                    <option value="${orientadorinstituicao.codigo}" <c:if test="${estagio.codOrientadorInstituicao == orientadorinstituicao.codigo}"> selected</c:if> >
                                         ${orientadorinstituicao.nome}
                                     </option>
                                 </c:forEach>
@@ -90,7 +91,7 @@
                     <td><input type="submit" name="btnCancelar" value = "Cancelar"></td>
                 </tr>
             </table>
-            
+        </div>    
         </form>
         <SCRIPT language="JavaScript">
             function campoNumerico(valor)

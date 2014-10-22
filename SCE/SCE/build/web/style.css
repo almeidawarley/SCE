@@ -15,9 +15,12 @@ h1{
 #manters{
     float: left;
 }
-table{
+table,th, td{
     text-align: center;
-    
+    border: 1px solid white;
+}
+
+input{
 }
 
 #relatorio{

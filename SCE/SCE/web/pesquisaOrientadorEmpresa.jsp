@@ -12,10 +12,13 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Pesquisa de Orientadores da Empresa</title>
+    <a href="pesquisaOrientadorEmpresa.jsp"></a>
         <link rel="stylesheet" type= "text/css" href="style.css" />
     </head>
     <body>
+        <div id="container">
         <h1>Pesquisa de Orientadores da Empresa</h1>
+        <hr>
         <table border="1">
             <tr>
                 <th>Código do Orientador da Empresa</th>
@@ -34,5 +37,6 @@
             <form action="ManterOrientadorEmpresaController?acao=prepararOperacao&operacao=Incluir" method="post">
                 <input type="submit" name="btnIncluir" value="Incluir">
             </form>
+        </div>
     </body>
 </html>

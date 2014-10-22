@@ -15,6 +15,7 @@
         <link rel="stylesheet" type= "text/css" href="style.css" />
     </head>
     <body>
+        <div id="container">
         <h1>Manter Curso - ${operacao}</h1>
            <hr/>
         <form action="ManterCursoController?acao=confirmarOperacao&operacao=${operacao}" 
@@ -44,7 +45,7 @@
                     <td><input type="submit" name="btnCancelar" value = "Cancelar"></td>
                 </tr>
             </table>
-            
+        </div>    
         </form>
         
         <SCRIPT language="JavaScript">

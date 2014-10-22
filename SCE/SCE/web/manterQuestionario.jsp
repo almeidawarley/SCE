@@ -12,6 +12,7 @@
         <title>Avaliar Estágio</title>
     </head>
     <body>
+        <div id="container">
         <h1>Manter Questionário - ${operacao}</h1>
         <hr/>
         <form action="" method="post" name="frmManterAluno">
@@ -51,5 +52,6 @@
                     <td><input type="submit" name="btnCancelar" value = "Cancelar"></td>
                 </tr>
             </table>
+        </div>
     </body>
 </html>

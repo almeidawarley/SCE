@@ -15,7 +15,9 @@
         <link rel="stylesheet" type= "text/css" href="style.css" />
     </head>
     <body>
+        <div id="container">
         <h1>Pesquisa de Estágios</h1>
+        <hr>
         <table border="1">
             <tr>
                 <th>Código Estágio</th>
@@ -35,5 +37,6 @@
             <form action="ManterEstagioController?acao=prepararOperacao&operacao=Incluir" method="post">
                 <input type="submit" name="btnIncluir" value="Incluir">
             </form>
+        </div>
     </body>
 </html>

@@ -12,10 +12,12 @@ import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.HashMap;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import model.Curso;
 import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.JasperExportManager;
 import net.sf.jasperreports.engine.JasperFillManager;
@@ -36,13 +38,41 @@ public class RelatorioOriInstController extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String acao = request.getParameter("acao");
+        if (acao.equals("confirmarOperacao")) {
+            confirmarOperacao(request, response);
+        } else {
+            if (acao.equals("prepararOperacao")) {
+                prepararOperacao(request, response);
+            }
+        }
+    }
+    
+    public void prepararOperacao(HttpServletRequest request, HttpServletResponse response) throws ServletException {
+        try {
+            
+            request.setAttribute("cursos", Curso.obterCursos()); 
+            RequestDispatcher view = request.getRequestDispatcher("/relataOriInst.jsp");
+            view.forward(request, response);
+        } catch (ServletException e) {
+            throw e;
+        } catch (IOException e) {
+            throw new ServletException(e);
+        } catch (SQLException e) {
+            throw new ServletException(e);
+        } catch (ClassNotFoundException e) {
+            throw new ServletException(e);
+        }
+    }
+    
+     public void confirmarOperacao(HttpServletRequest request, HttpServletResponse response) throws IOException,ServletException {
         Connection conexao = null;
         try {
 
             conexao = BD.getConexao();
             HashMap parametros = new HashMap();
-            parametros.put("codCurso", Integer.parseInt(request.getParameter("txtCodCurso")));
+            parametros.put("codCurso", Integer.parseInt(request.getParameter("optCodCurso")));
             String relatorio =  getServletContext().getRealPath("/WEB-INF/relatorios")+"/OrientadorInst.jasper";
             JasperPrint jp = JasperFillManager.fillReport(relatorio, parametros, conexao);
             byte[] relat = JasperExportManager.exportReportToPdf(jp);

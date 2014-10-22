@@ -15,6 +15,7 @@
         <link rel="stylesheet" type= "text/css" href="style.css" />
     </head>
     <body>
+        <div id="container">
         <h1>Manter Orientador da Empresa - ${operacao}</h1>
         <hr/>
         <form action="ManterOrientadorEmpresaController?acao=confirmarOperacao&operacao=${operacao}" 
@@ -40,7 +41,7 @@
                     <td>Empresa:</td>
                     <td><select name="optCodEmp">
                                 <c:forEach items="${empresas}" var="empresa">
-                                    <option value="${empresa.codigo}" <c:if test="${orientadorempresa.empresa.codigo == empresa.codigo}"> selected</c:if>>
+                                    <option value="${empresa.codigo}" <c:if test="${orientadorempresa.codEmpresa == empresa.codigo}"> selected</c:if>>
                                         ${empresa.nome}
                                     </option>
                                 </c:forEach>
@@ -52,7 +53,7 @@
                     <td><input type="submit" name="btnCancelar" value = "Cancelar"></td>
                 </tr>
             </table>
-            
+        </div>    
         </form>
         <SCRIPT language="JavaScript">
             function campoNumerico(valor)
