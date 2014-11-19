@@ -32,9 +32,16 @@
 		<td><a href="ManterEmpresaController?acao=prepararOperacao&operacao=Excluir&codEmpresa=<c:out value="${empresa.codigo}"/>">Excluir</a></td>
             </tr>
          </c:forEach>
+          
         </table>
+          <br/>
             <form action="ManterEmpresaController?acao=prepararOperacao&operacao=Incluir" method="post">
                 <input type="submit" name="btnIncluir" value="Incluir">
+            </form>
+        
+        &nbsp;&nbsp;
+            <form action="index.jsp">
+                <input type ="submit" name ="btnVoltar" value="Voltar">
             </form>
         </div>
     </body>

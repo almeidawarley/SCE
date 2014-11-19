@@ -34,8 +34,14 @@
             </tr>
          </c:forEach>
         </table>
+        <br/>
             <form action="ManterOrientadorEmpresaController?acao=prepararOperacao&operacao=Incluir" method="post">
                 <input type="submit" name="btnIncluir" value="Incluir">
+            </form>
+        
+        &nbsp;&nbsp;
+            <form action="index.jsp">
+                <input type ="submit" name ="btnVoltar" value="Voltar">
             </form>
         </div>
     </body>

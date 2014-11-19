@@ -6,6 +6,10 @@
 
 package model;
 
+import dao.QuestionarioDAO;
+import java.sql.SQLException;
+import java.util.List;
+
 /**
  *
  * @author Aluno
@@ -124,5 +128,27 @@ public class Questionario {
      */
     public void setCodEstagio(int codEstagio) {
         this.codEstagio = codEstagio;
+    }
+    
+     public void gravar() throws SQLException, ClassNotFoundException {
+        QuestionarioDAO.gravar(this);
+    }
+
+    public void alterar() throws SQLException, ClassNotFoundException {
+        QuestionarioDAO.alterar(this);
+    }
+
+    public void excluir() throws SQLException, ClassNotFoundException {
+        QuestionarioDAO.excluir(this);
+    }
+    
+    public static Questionario obterQuestionario(int codQuestionario)
+            throws ClassNotFoundException, SQLException{
+        return QuestionarioDAO.obterQuestionario(codQuestionario);
+    }
+    
+    public static List<Questionario> obterQuestionarios()
+            throws ClassNotFoundException, SQLException {
+        return QuestionarioDAO.obterQuestionarios();
     }
 }

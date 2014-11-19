@@ -25,7 +25,8 @@
             <h3><a href="PesquisaOrientadorEmpresaController"> Manter Orientador da Empresa </a><br/></h3>
             <h3><a href="PesquisaOrientadorInstituicaoController"> Manter Orientador da Instituição</a><br/></h3>
             <h3><a href="PesquisaEstagioController"> Manter Estágio </a><br/></h3>
-            
+            <h3><a href="PesquisaVagaController"> Manter Vaga</a><br/></h3>
+
             </div>
             
             <div id="relatorio">

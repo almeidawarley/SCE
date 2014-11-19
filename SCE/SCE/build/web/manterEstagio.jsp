@@ -19,7 +19,7 @@
         <h1>Manter Estágio - ${operacao}</h1>
         <hr/>
         <form action="ManterEstagioController?acao=confirmarOperacao&operacao=${operacao}" 
-              method="post" name="frmManterEstagio" onSubmit="return validarFormulario(this)">
+              method="post" name="frmManterEstagio" onSubmit = "return validarFormulario(this)">
             <table>
                 <tr>    
                     <td>Código do Estágio: </td>
@@ -99,10 +99,10 @@
                 var caracteresValidos = "0123456789";
                 var ehNumero = true;
                 var umCaracter;
-                for (i = 0; i < valor.length && ehNumero == true; i++) 
+                for (i = 0; i < valor.length && ehNumero === true; i++) 
                 { 
                     umCaracter = valor.charAt(i); 
-                    if (caracteresValidos.indexOf(umCaracter) == -1) 
+                    if (caracteresValidos.indexOf(umCaracter) === -1) 
                     {
                         ehNumero = false;
                     }

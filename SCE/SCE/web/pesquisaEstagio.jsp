@@ -30,13 +30,22 @@
                 <td><c:out value="${estagio.descricao}"/></td>
 		<td><a href="ManterEstagioController?acao=prepararOperacao&operacao=Editar&codEstagio=<c:out value="${estagio.codigo}"/>">Editar</a></td>
 		<td><a href="ManterEstagioController?acao=prepararOperacao&operacao=Excluir&codEstagio=<c:out value="${estagio.codigo}"/>">Excluir</a></td>
-                <td><a href="ManterEstagioController?acao=prepararOperacao&operacao=Avaliar&codEstagio=<c:out value="${estagio.codigo}"/>">Avaliar</a></td>
+                <td><a href="ManterQuestionarioController?acao=prepararOperacao&operacao=Incluir&codEstagio=<c:out value="${estagio.codigo}"/>">Avaliar</a></td>
             </tr>
          </c:forEach>
         </table>
+        <br/>
             <form action="ManterEstagioController?acao=prepararOperacao&operacao=Incluir" method="post">
                 <input type="submit" name="btnIncluir" value="Incluir">
             </form>
+        &nbsp;&nbsp;
+            <form action="index.jsp">
+                <input type ="submit" name ="btnVoltar" value="Voltar">
+            </form>
+        <br/>
+        ->
+        <a href="PesquisaQuestionarioController">Ver todas as avaliações</a>
+            
         </div>
     </body>
 </html>
