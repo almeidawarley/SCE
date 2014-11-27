@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Empresa" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f1fb515b-33f1-4b99-907a-cb38c528c46c">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     tbempresa.`codigo` AS tbempresa_codigo,
+     tbempresa.`nome` AS tbempresa_nome,
+     tbempresa.`telefone` AS tbempresa_telefone,
+     tbempresa.`logradouro` AS tbempresa_logradouro,
+     tbempresa.`numero` AS tbempresa_numero,
+     tbempresa.`complemento` AS tbempresa_complemento,
+     tbempresa.`bairro` AS tbempresa_bairro,
+     tbempresa.`cidade` AS tbempresa_cidade,
+     tbempresa.`uf` AS tbempresa_uf,
+     tbempresa.`cnpj` AS tbempresa_cnpj
+FROM
+     `tbempresa` tbempresa]]>
+	</queryString>
+	<field name="tbempresa_codigo" class="java.lang.Long"/>
+	<field name="tbempresa_nome" class="java.lang.String"/>
+	<field name="tbempresa_telefone" class="java.lang.String"/>
+	<field name="tbempresa_logradouro" class="java.lang.String"/>
+	<field name="tbempresa_numero" class="java.lang.String"/>
+	<field name="tbempresa_complemento" class="java.lang.String"/>
+	<field name="tbempresa_bairro" class="java.lang.String"/>
+	<field name="tbempresa_cidade" class="java.lang.String"/>
+	<field name="tbempresa_uf" class="java.lang.String"/>
+	<field name="tbempresa_cnpj" class="java.lang.String"/>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement uuid="d003cdba-b02a-4e0a-8f31-84f2ff0793dd" mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699"/>
+				<staticText>
+					<reportElement uuid="d5e2f09a-b8a9-4997-9d0b-c74ec465c97d" x="20" y="20" width="234" height="43" forecolor="#FFFFFF"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Empresas]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="e81899e8-842e-41dd-a766-196583751059" x="395" y="43" width="180" height="20" forecolor="#FFFFFF"/>
+					<textElement textAlignment="Right">
+						<font size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Empresas cadastradas]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21">
+			<line>
+				<reportElement uuid="7bb7e29b-33eb-48b1-be40-7968809b75cc" x="-20" y="20" width="595" height="1" forecolor="#666666"/>
+			</line>
+			<staticText>
+				<reportElement uuid="dac52c7b-8b09-468a-b92c-94ab1c2993c3" mode="Opaque" x="0" y="0" width="55" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Código]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5004580d-4790-4f6c-97fd-01d05061d671" mode="Opaque" x="55" y="0" width="55" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nome]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f6e2d05a-5a9e-425e-87fc-bf3eb4434ec3" mode="Opaque" x="110" y="0" width="55" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tel]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="3784e019-6157-4de2-83b8-661ea543f020" mode="Opaque" x="165" y="0" width="55" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Rua]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8f6d2433-e939-4d7d-99fe-d6515cac0e64" mode="Opaque" x="220" y="0" width="31" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nº]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="76b0a0fa-ed81-4582-ae84-729ed3800ea8" mode="Opaque" x="251" y="0" width="79" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Comp]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="75df14cf-14f3-4878-b7a1-92416802e53d" mode="Opaque" x="330" y="0" width="55" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Bairro]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="321cf62d-b3c6-49da-9710-7b041deef31a" mode="Opaque" x="385" y="0" width="55" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cidade]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4d5ef0fa-9d8b-4011-a45f-a0c27ccdd84a" mode="Opaque" x="440" y="0" width="55" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[UF]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="27e16903-083b-4999-bbe5-f27b827d8c9b" mode="Opaque" x="495" y="0" width="55" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CNPJ]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<line>
+				<reportElement uuid="ebd39400-610b-46e0-9d31-566bbd80b835" positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1"/>
+			</line>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="d4dac033-7bb2-4cc8-a718-84c5b9898077" x="0" y="0" width="55" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbempresa_codigo}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="5b17b125-507e-4e35-9101-2bf980feffb2" x="55" y="0" width="55" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbempresa_nome}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="5f922252-5131-46bd-b50a-9bd0e513c5d9" x="110" y="0" width="55" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbempresa_telefone}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="687d54ed-e033-4027-9f77-ca0b32fb58b5" x="165" y="0" width="55" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbempresa_logradouro}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="4b082ac3-d178-4106-9a6b-bf0aeb048bda" x="220" y="0" width="31" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbempresa_numero}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="938c2833-e436-4138-8b7f-e84b6a27f307" x="251" y="0" width="79" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbempresa_complemento}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="82e9be7a-9cd5-4180-8301-c21f9c78df45" x="330" y="0" width="55" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbempresa_bairro}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="515bc0cd-d42f-4337-9bb1-2e985bf8aa21" x="385" y="0" width="55" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbempresa_cidade}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="482dd5e1-0ff9-4c4f-8d00-cfc015df264b" x="440" y="0" width="55" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbempresa_uf}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="f4fd9c3a-6961-4b62-a0e8-ff10ed9ca56f" x="495" y="0" width="55" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbempresa_cnpj}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement uuid="40503c26-d242-40c5-9ac8-b017aed18516" mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6"/>
+				<textElement/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="fa83d577-842d-40cc-850a-56afedef7b51" mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="c51f4a96-2c53-4448-a291-5d1317b5ee3b" x="0" y="4" width="100" height="13"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>

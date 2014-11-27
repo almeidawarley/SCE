@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="OrientadorInst" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f4e48217-70ec-4c92-8092-08691d2c496b">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="codCurso" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT
+     tborientadorinstituicao.`codigo` AS tborientadorinstituicao_codigo,
+     tborientadorinstituicao.`tbCurso_codigo` AS tborientadorinstituicao_tbCurso_codigo,
+     tbcurso.`codigo` AS tbcurso_codigo,
+     tbcurso.`nome` AS tbcurso_nome,
+     tbcurso.`cargaHoraria` AS tbcurso_cargaHoraria,
+     tbcurso.`obrigatoriedade` AS tbcurso_obrigatoriedade,
+     tbpessoa.`codigo` AS tbpessoa_codigo,
+     tbpessoa.`nome` AS tbpessoa_nome,
+     tbpessoa.`telefone` AS tbpessoa_telefone
+FROM
+     `tbcurso` tbcurso INNER JOIN `tborientadorinstituicao` tborientadorinstituicao ON tbcurso.`codigo` = tborientadorinstituicao.`tbCurso_codigo`,
+     `tbpessoa` tbpessoa WHERE tbpessoa.codigo = tborientadorinstituicao.codigo AND tborientadorinstituicao.`tbCurso_codigo` = $P{codCurso}]]>
+	</queryString>
+	<field name="tborientadorinstituicao_codigo" class="java.lang.Long"/>
+	<field name="tbcurso_codigo" class="java.lang.Long"/>
+	<field name="tbcurso_nome" class="java.lang.String"/>
+	<field name="tbpessoa_nome" class="java.lang.String"/>
+	<field name="tbpessoa_telefone" class="java.lang.String"/>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699" uuid="7cff6848-a1a1-400b-b175-944ea0b12309"/>
+				<staticText>
+					<reportElement x="20" y="20" width="234" height="43" forecolor="#FFFFFF" uuid="976bfade-bf69-4f1d-bc49-c05b00fc006b"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Orientadores]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="395" y="43" width="180" height="20" forecolor="#FFFFFF" uuid="3b079569-e9cc-4a53-9a7c-6c9686cffc19"/>
+					<textElement textAlignment="Right">
+						<font size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Orientadores da Instituição]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21">
+			<line>
+				<reportElement x="-20" y="20" width="595" height="1" forecolor="#666666" uuid="05021cd3-ee0d-4a59-923a-afd5eeccf0df"/>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="111" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="a4815900-a8a6-4ec5-a85b-d6c76ac04386"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Código]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="111" y="0" width="111" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="37d79a81-78bc-440f-ba8e-b2256f59cc83"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Código Curso]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="222" y="0" width="111" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="19f693b9-3330-4051-9021-51f84e0b0cf9"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nome Curso]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="333" y="0" width="111" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="c4f415fb-ffca-4fac-8b4c-ff3a5b2e107e"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nome]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="444" y="0" width="111" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="dfc0193d-7dc2-4cfc-8386-dc77dd6648b3"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Telefone]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1" uuid="e7fb5a72-17e6-4701-acfb-2253a6460319"/>
+			</line>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="0" y="0" width="111" height="20" uuid="c98ececd-fa6e-4619-a1eb-45f7c5f66649"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tborientadorinstituicao_codigo}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="111" y="0" width="111" height="20" uuid="224dcfba-c802-49be-a395-eeb9a34db615"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbcurso_codigo}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="222" y="0" width="111" height="20" uuid="5a17e64c-a0b3-4036-9e38-0d22582f47d9"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbcurso_nome}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="333" y="0" width="111" height="20" uuid="13312452-05cb-4920-9ef7-1913c1b595a0"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbpessoa_nome}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="444" y="0" width="111" height="20" uuid="272d4493-5692-4e83-a7c5-59e86b976253"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbpessoa_telefone}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" uuid="0e96c1ed-0c03-492c-ae27-3ef9f60354ee"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="f6260ca3-cb2e-4096-9fe6-559ec8ae791b"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="4" width="100" height="13" uuid="4ef1a2e1-8bf4-4c2f-a170-ecab274cee83"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>

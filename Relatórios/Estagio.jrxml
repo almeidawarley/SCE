@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Estagio" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3149a5c1-1eef-4ab5-a553-bf152e62d9f6">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="codAluno" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT
+     tbestagio.`codigo` AS tbestagio_codigo,
+     tbestagio.`tbEmpresa_codigo` AS tbestagio_tbEmpresa_codigo,
+     tbestagio.`tbAluno_codigo` AS tbestagio_tbAluno_codigo,
+     tbestagio.`tbOrientadorEmpresa_codigo` AS tbestagio_tbOrientadorEmpresa_codigo,
+     tbestagio.`tbOrientadorInstituicao_codigo` AS tbestagio_tbOrientadorInstituicao_codigo,
+     tbestagio.`cargaHoraria` AS tbestagio_cargaHoraria,
+     tbestagio.`descricao` AS tbestagio_descricao
+FROM
+     `tbestagio` tbestagio
+WHERE tbestagio.tbAluno_codigo = $P{codAluno}]]>
+	</queryString>
+	<field name="tbestagio_codigo" class="java.lang.Long"/>
+	<field name="tbestagio_tbEmpresa_codigo" class="java.lang.Long"/>
+	<field name="tbestagio_tbAluno_codigo" class="java.lang.Long"/>
+	<field name="tbestagio_tbOrientadorEmpresa_codigo" class="java.lang.Long"/>
+	<field name="tbestagio_tbOrientadorInstituicao_codigo" class="java.lang.Long"/>
+	<field name="tbestagio_cargaHoraria" class="java.lang.Long"/>
+	<field name="tbestagio_descricao" class="java.lang.String"/>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699" uuid="58af5b5e-0477-41b5-bf42-3cd4af7b3a74"/>
+				<staticText>
+					<reportElement x="20" y="20" width="234" height="43" forecolor="#FFFFFF" uuid="dab150c5-4a63-4ef8-8010-fb061885652a"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Estágios	]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="415" y="43" width="180" height="20" forecolor="#FFFFFF" uuid="c3d3205f-3969-44ba-bbb6-d1cf5b52ec45"/>
+					<textElement textAlignment="Right">
+						<font size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Estágios cadastrados]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="14"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21">
+			<line>
+				<reportElement x="-20" y="20" width="595" height="1" forecolor="#666666" uuid="c3d3ede3-5cfb-4571-80ff-22ff8a96e109"/>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="79" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="023c2e44-11a2-4080-8cf7-15f008961669"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Código]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="79" y="0" width="79" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="4fc4b97a-d5f0-42ee-875d-8b08c14bf09c"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Empresa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="158" y="0" width="59" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="dec67b9f-073d-4528-83eb-c6330bd3654e"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Aluno]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="217" y="0" width="99" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="a762a558-4df5-4178-b088-e9c1d926fa90"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ori_Empresa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="316" y="0" width="110" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="b5852ef9-7287-4e4c-8c26-674c8e72d694"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ori_Instituicao]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="426" y="0" width="48" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="7d2b1487-7046-4777-a698-77e15eb92403"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Carga Horária]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="474" y="0" width="79" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="8399e7a7-bbbb-470c-a743-10f05ae0133b"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Descrição]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1" uuid="55647af3-8740-4c9b-a58d-8cbb133d29ab"/>
+			</line>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="0" y="0" width="79" height="20" uuid="4de92b57-27c5-4f8d-a285-35635f2fbca3"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbestagio_codigo}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="79" y="0" width="79" height="20" uuid="8e1f180e-b9fd-4f02-a7dc-97081e7dc810"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbestagio_tbEmpresa_codigo}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="158" y="0" width="59" height="20" uuid="774ea62a-d5c4-4592-a75e-b126868a1668"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbestagio_tbAluno_codigo}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="217" y="0" width="99" height="20" uuid="3b3b992f-f3e7-4e80-bba8-0c989d29c332"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbestagio_tbOrientadorEmpresa_codigo}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="316" y="0" width="110" height="20" uuid="0ea95258-97e9-4f6d-93b3-aec347240651"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbestagio_tbOrientadorInstituicao_codigo}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="426" y="0" width="48" height="20" uuid="26ed8d44-26bc-4f84-a2c2-aaa05211aaff"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbestagio_cargaHoraria}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="474" y="0" width="79" height="20" uuid="7a4ccf40-512b-4fd7-8770-b63a770a396d"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbestagio_descricao}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" uuid="ed86d3ea-de6d-4076-aee5-be4353fdc4a2"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="278a0b62-5eaa-4431-8699-8c7e9e4b4435"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="4" width="100" height="13" uuid="b73aea7d-41e4-4383-9170-92791a8d5bed"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>
