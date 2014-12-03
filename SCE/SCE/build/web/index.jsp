@@ -1,7 +1,7 @@
 <%-- 
     Document   : index
     Created on : 09/04/2014, 16:17:13
-    Author     : Aluno
+    Author     : Pedro e Warley
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -36,7 +36,7 @@
             <h3><a href="RelatorioOriEmpController?acao=prepararOperacao"> Relatório Orientador da Empresa </a><br/></h3>
             <h3><a href="RelatorioOriInstController?acao=prepararOperacao"> Relatório Orientador da Instituição </a><br/></h3>
             <h3><a href="RelatorioEstagioController?acao=prepararOperacao"> Relatório Estágio </a><br/></h3>
-            
+            <h3><a href="RelatorioVagaController?acao=prepararOperacao"> Relatório Vaga </a><br/></h3>
             </div>
         </div>
     </body>

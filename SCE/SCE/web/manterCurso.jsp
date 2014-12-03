@@ -1,7 +1,7 @@
 <%-- 
     Document   : manterCurso
     Created on : 09/04/2014, 16:19:00
-    Author     : Aluno
+    Author     : Pedro e Warley
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -42,7 +42,7 @@
                 </tr>
                 <tr>
                     <td><input type="submit" name="btnConfirmar" value = "Confirmar"></td>
-                    <td><input type="submit" name="btnCancelar" value = "Cancelar"></td>
+                    <td>&nbsp;<a href="index.jsp">Cancelar</a></td>
                 </tr>
             </table>
         </div>    

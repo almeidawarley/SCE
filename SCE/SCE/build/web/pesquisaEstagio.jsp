@@ -44,7 +44,8 @@
             </form>
         <br/>
         ->
-        <a href="PesquisaQuestionarioController">Ver todas as avaliações</a>
+        <a href="PesquisaQuestionarioController">Ver todas as avaliações</a><br>
+        <a href="RelatorioQuestionarioController?acao=prepararOperacao">-> Avaliações por estágio</a>
             
         </div>
     </body>

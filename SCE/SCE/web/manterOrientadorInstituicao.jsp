@@ -44,7 +44,7 @@
                 </tr>
                 <tr>
                     <td><input type="submit" name="btnConfirmar" value = "Confirmar"></td>
-                    <td><input type="submit" name="btnCancelar" value = "Cancelar"></td>
+                    <td>&nbsp;<a href="index.jsp">Cancelar</a></td>
                 </tr>
             </table>
         </div>    

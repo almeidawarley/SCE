@@ -92,6 +92,14 @@
         <servlet-name>PesquisaVagaController</servlet-name>
         <servlet-class>controller.PesquisaVagaController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>RelatorioVagaController</servlet-name>
+        <servlet-class>controller.RelatorioVagaController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RelatorioQuestionarioController</servlet-name>
+        <servlet-class>controller.RelatorioQuestionarioController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>PesquisaCursoController</servlet-name>
         <url-pattern>/PesquisaCursoController</url-pattern>
@@ -183,6 +191,14 @@
     <servlet-mapping>
         <servlet-name>PesquisaVagaController</servlet-name>
         <url-pattern>/PesquisaVagaController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RelatorioVagaController</servlet-name>
+        <url-pattern>/RelatorioVagaController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RelatorioQuestionarioController</servlet-name>
+        <url-pattern>/RelatorioQuestionarioController</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

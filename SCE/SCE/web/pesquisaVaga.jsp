@@ -27,7 +27,7 @@
          <c:forEach items="${vagas}" var="vaga">
             <tr>
 		<td><c:out value="${vaga.codigo}"/></td>
-                <td><c:out value="${vaga.curso}"/></td>
+                <td><c:out value="${vaga.codCurso}"/></td>
 		<td><a href="ManterVagaController?acao=prepararOperacao&operacao=Editar&codVaga=<c:out value="${vaga.codigo}"/>">Editar</a></td>
 		<td><a href="ManterVagaController?acao=prepararOperacao&operacao=Excluir&codVaga=<c:out value="${vaga.codigo}"/>">Excluir</a></td>            </tr>
          </c:forEach>

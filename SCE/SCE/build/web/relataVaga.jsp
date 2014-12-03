@@ -1,5 +1,5 @@
 <%-- 
-    Document   : relataAluno
+    Document   : relataVaga
     Created on : 24/09/2014, 16:47:37
     Author     : Aluno
 --%>
@@ -11,15 +11,15 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Relatório dos Orientadores da Instituição</title>
+        <title>Relatório de Vaga</title>
         <link rel="stylesheet" type= "text/css" href="style.css" />
     </head>
     <body>
         <div id="container">
-        <h1>Relatório Orientadores da Instituição</h1>
+        <h1>Relatório Vaga</h1>
         <hr>
-        <form action="RelatorioOriInstController?acao=confirmarOperacao" 
-              method="post" name="frmRelataOriInst">
+        <form action="RelatorioVagaController?acao=confirmarOperacao" 
+              method="post" name="frmRelataAluno">
             <table>
                 <tr>    
                     <td>Curso:</td>
@@ -29,6 +29,8 @@
                                         ${curso.nome}
                                     </option>
                                 </c:forEach>
+                                    
+                                    
                             </select></td>
                 </tr>
                

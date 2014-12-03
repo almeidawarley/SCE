@@ -1,7 +1,7 @@
 <%-- 
     Document   : manterEmpresa
     Created on : 09/04/2014, 16:44:58
-    Author     : Aluno
+    Author     :  Pedro e Warley
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -38,7 +38,7 @@
                     <td><input type="text" name="txtCNPJEmpresa" value="${empresa.cnpj}" <c:if test="${operacao == 'Excluir '}"> readonly </c:if>></td>
                 </tr>
                 <tr>
-                    <td>Endereço</td> 
+                    <th colspan="2">Endereço</th> 
                 </tr>
                 <tr>
                     <td>Logradouro:</td> 
@@ -67,7 +67,7 @@
                 
                 <tr>
                     <td><input type="submit" name="btnConfirmar" value="Confirmar"></td>
-                    <td><input type="submit" name="btnCancelar" value = "Cancelar"></td>
+                    <td>&nbsp;<a href="index.jsp">Cancelar</a></td>
                 </tr>
             </table>
         </div>
